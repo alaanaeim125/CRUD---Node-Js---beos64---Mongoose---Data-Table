@@ -1,0 +1,63 @@
+table tr th {
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: monospace;
+    background-color: thistle
+}
+
+table {
+    text-align: center;
+}
+
+table tr td a .fa {
+    font-size: 33px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+table tr td a.btn {
+    border-radius: 20px;
+}
+
+table tr td a.btnx {
+    border-radius: 6px;
+    font-size: 25px;
+    padding: 0px 10px 0px 10px;
+    border: 0;
+
+}
+
+table tr td #buy {
+    width: 120px;
+    border-radius: 3px;
+    border: 2px solid indianred;
+    padding: 2px;
+    margin: 0px -2px 0px 0px;
+
+}
+
+
+.all {
+    text-align: center;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.all h1 {
+    margin-bottom: 30px;
+}
+
+.in {
+    margin-top: 40px;
+}
+
+.all .part1 {
+    background-color: yellowgreen;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#P_Image {
+    background-color: yellowgreen
+}

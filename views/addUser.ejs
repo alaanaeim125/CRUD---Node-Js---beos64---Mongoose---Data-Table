@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sample Node App</title>
+    <style>
+        h1 {
+            margin: 0px 0px 40px 0px;
+        }
+
+        .btny {
+            margin-top: 45px;
+        }
+
+        .rightSide {
+            float: right;
+            width: 500px;
+        }
+
+        .leftSide {
+            float: left;
+            width: 500px;
+        }
+
+        #ff {
+            margin-left: -105px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="http://localhost:8080">Home Page</a> </li>
+            <li class="breadcrumb-item active" aria-current="page">Add New User</li>
+        </ol>
+    </nav>
+
+    <div class="container">
+        <div class="allPage text-center">
+            <h1>Add New Product</h1>
+            <form action="http://localhost:8080/insertUser" method="POST" enctype="multipart/form-data>
+                <div class=" row">
+
+                <div class="col-md-12">
+                    <div class="rightSide">
+                        <input id="ff" type="file" name="Pimage" onchange="encode_img_base64(this)" required>
+                        <img src="" id="myimage" width="400" height="400">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="leftSide">
+                        <input type="text" class="form-control btny" id="exampleInputPassword1" name="Pname"
+                            placeholder="Enter Product Name">
+                        <input type="text" class="form-control btny" id="exampleInputPassword1" name="pBrand"
+                            placeholder="Enter Product Brand">
+                        <input type="number" min="1" class="form-control btny" id="exampleInputPassword1" name="Pquantity"
+                            placeholder="Enter Product Quantity">
+                        <input type="text" class="form-control btny" id="file_path" name="fileInput"
+                            placeholder="Product Image Path" value="" readonly required>
+                        <button type="submit" id="submit" class="btn btn-danger btn-block btny">Save Product</button>
+                    </div>
+                </div>
+
+
+        </div>
+        </form>
+    </div>
+    </div>
+
+
+    <script>
+        var encode_img_base64 = function (element) {
+            var file = element.files[0];
+            console.log(element.files)
+            var reader = new FileReader();
+
+            reader.onloadend = function () {
+                $("#myimage").attr('src', reader.result)
+                $("#file_path").val(reader.result)
+            }
+
+            reader.readAsDataURL(file);
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sample Node App</title>
+  <style>
+    h1 {
+      margin: 0px 0px 40px 0px;
+    }
+
+    .btny {
+      margin-bottom: 30px;
+    }
+
+    img {
+      border-radius: 15px;
+    }
+
+    .rightSide {
+      float: right;
+      width: 500px;
+    }
+
+    .leftSide {
+      float: left;
+      width: 500px;
+    }
+
+    #ff {
+      margin-left: -105px;
+    }
+
+    body {
+      background-color: #7597bb;
+    }
+
+    label {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      color: white
+    }
+  </style>
+</head>
+
+<body>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="http://localhost:8080">Home Page</a> </li>
+      <li class="breadcrumb-item active" aria-current="page">Product Details</li>
+    </ol>
+  </nav>
+
+  <div class="container">
+    <div class="allPage">
+      <h1 class="text-center">Product Details</h1>
+      <form action="http://localhost:8080/insertUser" method="POST" enctype="multipart/form-data>
+                <div class=" row">
+
+        <div class="col-md-12">
+          <div class="rightSide">
+            <img src="<%= userdata.fileInput %>" id="myimage" width="400" height="400" class="img-thumbnail">
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="leftSide">
+            <label>Product Name</label>
+            <input type="text" class="form-control btny" name="Pname" value="<%= userdata.Pname %>" readonly>
+            <label>Product Brand</label>
+            <input type="text" class="form-control btny" name="pBrand" value="<%= userdata.pBrand %>" readonly>
+            <label>Product Quantity</label>
+            <input type="number" class="form-control btny" name="Pquantity" value="<%= userdata.Pquantity %>" readonly>
+            <label>Product Path</label>
+            <input type="text" class="form-control btny" id="file_path" name="fileInput"
+              value="<%= userdata.fileInput %>" readonly>
+          </div>
+        </div>
+
+
+    </div>
+    </form>
+  </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+</body>
+
+</html>
