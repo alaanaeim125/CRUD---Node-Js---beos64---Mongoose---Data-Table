@@ -1,1 +1,1 @@
-CRUD - Node Js - beos64 - Mongoose - Data Table
+CRUD - Node Js - beos64 - Mongoose - Data Table - ejs
